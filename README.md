@@ -14,6 +14,10 @@ Looking for short, single-purpose API snippets (login, option chain, max pain, P
 | [gamma_hedging](gamma_hedging) | Gamma-aware dynamic delta hedging for SENSEX option sellers, with a terminal and a browser dashboard | [main.py](gamma_hedging/main.py) |
 | [delta_neutral_backtest](delta_neutral_backtest) | Backtest a short ATM straddle with and without a futures delta hedge on historical 1-minute option and index data | [run_backtest.py](delta_neutral_backtest/run_backtest.py) |
 | [open_interest_dashboard](open_interest_dashboard) | NIFTY 50 constituent pressure, option chain open interest (OI) change and gamma-aware contract ranking on a live terminal and web dashboard | [main.py](open_interest_dashboard/main.py) |
+| [delta_neutral_straddle](delta_neutral_straddle) | Delta-neutral short ATM straddle: enter from the live option chain, track net delta from the Greeks stream and add hedge legs when it drifts | [main.py](delta_neutral_straddle/main.py) |
+| [websocket_monitor](websocket_monitor) | Local dashboard for a live market-data websocket: tick tape, latency trace, heartbeat and event log (demo mode needs no login) | [main.py](websocket_monitor/main.py) |
+| [order_lifecycle_console](order_lifecycle_console) | Local dashboard that tracks order states and realtime order updates, with optional UAT test orders | [main.py](order_lifecycle_console/main.py) |
+| [trader_cockpit](trader_cockpit) | Local option chain dashboard: live spot, OI wall ladder, IV, PCR and tick tape (market data only) | [main.py](trader_cockpit/main.py) |
 
 ## Setup
 
@@ -30,7 +34,7 @@ Looking for short, single-purpose API snippets (login, option chain, max pain, P
 
 ## Verification status
 
-Each project was run against the UAT sandbox on 2026-10-19: the backtest on historical data, and the dashboards, scanner, watchdog and hedgers live in dry-run mode with real option chains, Greeks and websocket streams.
+The first four projects were run against the UAT sandbox on 2026-10-19: the backtest on historical data, and the dashboards, scanner, watchdog and hedgers live in dry-run mode with real option chains, Greeks and websocket streams. `delta_neutral_straddle`, `websocket_monitor`, `order_lifecycle_console` and `trader_cockpit` were checked on UAT after market hours: login, option chain and order-list requests, the margin API for the straddle's order payloads, and each local server. Live ticks and Greeks were not exercised for those four.
 
 Not verified live: actual order placement, modification and cancellation (`--place-orders`), because the UAT test account had no funds; those payloads were checked against the installed SDK only. UAT returns no previous open interest, so the open interest dashboard's OI-change score stays at zero there; use PROD data to see it move.
 

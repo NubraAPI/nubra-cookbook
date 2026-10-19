@@ -1,0 +1,12 @@
+# Local credentials and SDK session store - never commit
+.env
+auth_data.db*
+
+# Python
+__pycache__/
+*.pyc
+
+# Runtime state
+logs/
+*.log
+.uat_order_run.lock
