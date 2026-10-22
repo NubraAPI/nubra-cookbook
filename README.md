@@ -40,7 +40,7 @@ The first four projects were run against the UAT sandbox on 2026-10-19: the back
 Not verified live: actual order placement, modification and cancellation (`--place-orders`), because the UAT test account had no funds; those payloads were checked against the installed SDK only. UAT returns no previous open interest, so the open interest dashboard's OI-change score stays at zero there; use PROD data to see it move.
 
 ## Related
-
+- **Access Our Offfcial Python SDK at:** https://github.com/NubraAPI/nubra-python-sdk
 - [Nubra Python SDK](https://github.com/NubraAPI/nubra-python-sdk): install with `pip install nubra-sdk`; API how-to examples, guide and response schemas.
 - Single-file option chain analysis in the SDK repo: [max pain, PCR and OI analysis](https://github.com/NubraAPI/nubra-python-sdk/blob/main/examples/market_data/option_chain/max_pain_pcr_oi_analysis.py), [option Greeks near ATM](https://github.com/NubraAPI/nubra-python-sdk/blob/main/examples/market_data/option_chain/option_greeks_atm.py) and an [option strategy payoff calculator](https://github.com/NubraAPI/nubra-python-sdk/blob/main/examples/market_data/option_chain/option_strategy_payoff_calculator.py).
 
