@@ -1,4 +1,5 @@
-# Nubra Cookbook: Python Options Trading Examples (Delta Hedging, Gamma Hedging, Open Interest, Backtesting)
+# Nubra Python SDK Cookbook: Runnable Examples for Trading and Market Data
+The official Nubra Python SDK cookbook provides runnable examples and practical recipes for authentication, UAT sandbox testing, order execution, live market data, WebSockets, option chains, historical data and portfolio management.
 
 > **For educational and demonstration purposes only. Not investment advice.** These projects show how to use the [Nubra Python SDK](https://github.com/NubraAPI/nubra-python-sdk); they are not a recommendation to buy, sell or hold any instrument. Trading in the securities market is subject to market risk. Run everything on UAT (sandbox) first.
 
